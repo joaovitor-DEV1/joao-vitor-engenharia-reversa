@@ -1,0 +1,29 @@
+test01_tabelas_principais_existentes (__main__.TestesReversos.test01_tabelas_principais_existentes) ... ok
+test02_usuarios_semeados (__main__.TestesReversos.test02_usuarios_semeados) ... ok
+test03_clientes_semeados (__main__.TestesReversos.test03_clientes_semeados) ... ok
+test04_veiculos_semeados (__main__.TestesReversos.test04_veiculos_semeados) ... ok
+test05_agendamentos_semeados (__main__.TestesReversos.test05_agendamentos_semeados) ... ok
+test06_login_unico (__main__.TestesReversos.test06_login_unico) ... ok
+test07_placa_unica (__main__.TestesReversos.test07_placa_unica) ... ok
+test08_fk_veiculo_cliente (__main__.TestesReversos.test08_fk_veiculo_cliente) ... ok
+test09_fk_agendamento_veiculo (__main__.TestesReversos.test09_fk_agendamento_veiculo) ... ok
+test10_agendamentos_tem_data_iso (__main__.TestesReversos.test10_agendamentos_tem_data_iso) ... ok
+test11_agendamentos_relacionam_veiculo (__main__.TestesReversos.test11_agendamentos_relacionam_veiculo) ... ok
+test12_veiculos_relacionam_cliente (__main__.TestesReversos.test12_veiculos_relacionam_cliente) ... ok
+test13_placa_regex_cobre_mercosul_e_antiga (__main__.TestesReversos.test13_placa_regex_cobre_mercosul_e_antiga) ... ok
+test14_placa_regex_rejeita_formato_invalido (__main__.TestesReversos.test14_placa_regex_rejeita_formato_invalido) ... ok
+test15_rotas_protegidas_por_sessao (__main__.TestesReversos.test15_rotas_protegidas_por_sessao) ... ok
+test16_consultas_com_parametros (__main__.TestesReversos.test16_consultas_com_parametros) ... ok
+test17_hash_bcrypt_usado_no_login (__main__.TestesReversos.test17_hash_bcrypt_usado_no_login) ... ok
+test18_cookie_http_only_e_expiracao (__main__.TestesReversos.test18_cookie_http_only_e_expiracao) ... ok
+test19_criptografia_cpf_aes_gcm (__main__.TestesReversos.test19_criptografia_cpf_aes_gcm) ... ok
+test20_criptografia_usa_iv_aleatorio (__main__.TestesReversos.test20_criptografia_usa_iv_aleatorio) ... ok
+test21_frontend_escapa_html (__main__.TestesReversos.test21_frontend_escapa_html) ... ok
+test22_validacao_cpf_formato_e_duplicidade (__main__.TestesReversos.test22_validacao_cpf_formato_e_duplicidade) ... ok
+test23_validacao_data_calendario (__main__.TestesReversos.test23_validacao_data_calendario) ... ok
+test24_logout_destroi_sessao (__main__.TestesReversos.test24_logout_destroi_sessao) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.096s
+
+OK

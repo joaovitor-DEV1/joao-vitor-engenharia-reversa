@@ -1,0 +1,7 @@
+Registro de execução — 19/10/2026
+
+Runtime detectado: Node.js v22.16.0; npm 10.9.2.
+Tentativa: npm install --no-audit --no-fund, no diretório do sistema.
+Resultado: instalação não concluída no ambiente; logs npm registraram EAI_AGAIN ao baixar pacotes de https://registry.npmjs.org/ (falha de resolução DNS/rede). Express não ficou disponível para inicializar o servidor HTTP.
+
+Consequência: não foram inventados resultados de testes HTTP. As 24 verificações que puderam ser executadas estão em resultado-testes.txt; o script verifica SQLite, contratos no código e criptografia usando Node.js nativo. A tabela API01–API21 na documentação é plano de teste esperado, ainda não executado.

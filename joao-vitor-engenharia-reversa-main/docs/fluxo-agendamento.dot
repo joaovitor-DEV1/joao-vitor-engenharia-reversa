@@ -1,0 +1,24 @@
+digraph Fluxo {
+ graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.35", ranksep="0.45", label="Fluxo: cadastrar agendamento", labelloc=t, fontsize=18, fontname="Arial"];
+ node [shape=box, style="rounded,filled", fillcolor="#eef5ff", color="#334455", fontname="Arial", fontsize=10, margin="0.12,0.08"];
+ edge [fontname="Arial", fontsize=9, color="#334455", arrowsize=0.7];
+ inicio [label="Usuário abre Agendamentos"];
+ veiculos [label="Front-end solicita GET /api/veiculos"];
+ sessao [shape=diamond, label="Sessão válida?", fillcolor="#fff3d6"];
+ redir [label="API responde 401; front redireciona ao login"];
+ form [label="Seleciona veículo, data e serviço"];
+ post [label="POST /api/agendamentos"];
+ validar [shape=diamond, label="Veículo existe, data válida\ne serviço preenchido?", fillcolor="#fff3d6"];
+ erro [label="400 + { erro }; front mostra aviso", fillcolor="#ffe9e9"];
+ insert [label="INSERT parametrizado em SQLite"];
+ ok [label="201 + { ok: true }"];
+ atualizar [label="Front fecha modal e recarrega GET /api/agendamentos"];
+ fim [shape=oval, label="Agendamento exibido"];
+ inicio -> veiculos -> sessao;
+ sessao -> redir [label="Não"];
+ sessao -> form [label="Sim"];
+ form -> post -> validar;
+ validar -> erro [label="Não"];
+ validar -> insert [label="Sim"];
+ insert -> ok -> atualizar -> fim;
+}

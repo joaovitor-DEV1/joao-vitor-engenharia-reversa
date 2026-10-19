@@ -1,0 +1,11 @@
+digraph DER {
+  graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.65", ranksep="0.9", label="DER — Oficina AutoCerta (SQLite)", labelloc=t, fontsize=20, fontname="Arial"];
+  node [shape=record, style="rounded,filled", fillcolor="#eef5ff", color="#334455", fontname="Arial", fontsize=10, margin="0.12"];
+  edge [fontname="Arial", fontsize=9, color="#334455", arrowsize=0.8];
+  usuarios [label="{USUARIOS|PK id : INTEGER\lnome : TEXT NOT NULL\llogin : TEXT NOT NULL UNIQUE\lsenha : TEXT NOT NULL (bcrypt)\l}"];
+  clientes [label="{CLIENTES|PK id : INTEGER\lnome : TEXT NOT NULL\lcpf : TEXT NOT NULL (AES-256-GCM)\ltelefone : TEXT\lemail : TEXT\l}"];
+  veiculos [label="{VEICULOS|PK id : INTEGER\lplaca : TEXT NOT NULL UNIQUE\lmodelo : TEXT NOT NULL\ltipo : TEXT NOT NULL\lmarca : TEXT\lFK cliente_id : INTEGER NOT NULL\l}"];
+  agendamentos [label="{AGENDAMENTOS|PK id : INTEGER\lFK veiculo_id : INTEGER NOT NULL\ldata_agendamento : TEXT NOT NULL (AAAA-MM-DD)\lservico : TEXT NOT NULL\l}"];
+  clientes -> veiculos [label="1 : N\ncliente_id"];
+  veiculos -> agendamentos [label="1 : N\nveiculo_id"];
+}
